@@ -1,0 +1,8 @@
+<div class="dropdown" (clickOutside)="closeMenu()">
+    <button (click)='toggleMenu()' class="dropbtn">Dropdown</button>
+    <div class="dropdown-content" *ngIf='showMenu'>
+        <div *ngFor='let item of menuItems; let last = last'>
+            <a class="dropdown-content__item" (click)="selectItem(item)" [ngClass]="{'last-child': !last}">{{item}}</a>
+        </div>
+    </div>
+</div>

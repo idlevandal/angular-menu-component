@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'menu-comp';
+  items = ['Home', 'About', 'Test', 'Item'];
+
+  selectItem(menuItem: any) {
+    console.log(menuItem);
+    
+  }
 }
